@@ -1,5 +1,5 @@
-# [Two Sum](https://leetcode.com/problems/two-sum/)
-
+# [00001 Two Sum](https://leetcode.com/problems/two-sum/)
+github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
 ## 思路一：暴力解法
 1. 具体解法：遍历数组中所有数字两两相加，判断等于target
 
