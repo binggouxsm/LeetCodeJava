@@ -1,0 +1,23 @@
+# [00004 Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
+
+## 思路：递归查找
+### (1)具体解法：
+中位数是将一个数组划分为左右两个子集，每个子集长度相等或者差1，且右边子集的任意元素大于左边子集的任意元素。       
+假设数组A，有m个元素，则有m+1种切法（i = 0~m）,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_left | A_right
+A\[0\], A\[1\], ... , A\[i-2\], A\[i-1\]  |  A\[i\], A\[i+1\], ... , A\[m-1\], A\[m\]
+左边数组长度 i , 右边长度m - i, i = 0 时左边集合为空，i = m 时，右边集合为空
+同样对B进行同样操作，有n个元素，则有n+1种切法（j = 0~n）
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;left_part | right_part
+A\[0\], A\[1\], ... , A\[i-2\], A\[i-1\]  |  A\[i\], A\[i+1\], ... , A\[m-1\], A\[m\]
+B\[0\], B\[1\], ... , B\[j-2\], B\[j-1\]  |  B\[j\], B\[j+1\], ... , B\[n-1\], B\[n\], 
+要寻找的结果为一个i, j的划分，使得：
+（1）左边长度=右边长度或差1  i + j = m - i + n - j (或： m - i + n - j + 1)
+（2）右边子集的任意元素大于等于左边子集的任意元素
+转化为等价的条件即为：
+（1）i =0 ~ m , j = ( m + n + 1 ) / 2 - i (为了避免j为负数，假设m>=n)
+（2）A\[ i - 1 \] <= B\[j] 且 B\[j - 1] <= A\[ i ]
+
+
+
