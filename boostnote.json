@@ -1,0 +1,45 @@
+{
+  "folders": [
+    {
+      "key": "44cb8d84ff45039d93dc",
+      "color": "#30D5C8",
+      "name": "00001 Two Sum"
+    },
+    {
+      "key": "ec1816eb601108b50568",
+      "color": "#30D5C8",
+      "name": "00002 Add Two Numbers"
+    },
+    {
+      "key": "ee8bd9a4e75cf0bd05ca",
+      "color": "#30D5C8",
+      "name": "00003 Longest Substring Without Repeating Characters"
+    },
+    {
+      "key": "07b0e1257881da086911",
+      "color": "#FF8E00",
+      "name": "00004 Median of Two Sorted Arrays"
+    },
+    {
+      "key": "0d5ab955d4cd65f527bc",
+      "color": "#E10051",
+      "name": "00005 Longest Palindromic Substring"
+    },
+    {
+      "key": "6694c1b68599ab278592",
+      "color": "#B013A4",
+      "name": "00007 Reverse Integer"
+    },
+    {
+      "key": "227ba47f55350a74b9fd",
+      "color": "#2BA5F7",
+      "name": "00011 Container With Most Water"
+    },
+    {
+      "key": "108c3fae96246b2654cd",
+      "color": "#E10051",
+      "name": "00013 Roman to Integer"
+    }
+  ],
+  "version": "1.0"
+}

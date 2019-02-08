@@ -1,0 +1,53 @@
+createdAt: "2019-02-04T07:02:01.250Z"
+updatedAt: "2019-02-04T07:56:43.386Z"
+type: "MARKDOWN_NOTE"
+folder: "ec1816eb601108b50568"
+title: "00002 Add Two Numbers"
+tags: []
+content: '''
+  # [00002 Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
+  github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
+  ## 思路：暴力解法
+  1. 具体解法： 同时遍历 l1, l2 两个链表，如果两个链表节点的值相加超过10时，当前值为 模10 的结果，且下次计算 链表节点的值 +1。直到两个链表遍历结束。
+  2. 具体优化细节：
+     (1) 利用相加的值整除10 ，得到是否进位的标识；利用相加的值%10，得到当前值
+     (2) 当一条链表结束时的空值处理，只需对取值和取下一节点，进行非空判断，如果为空，则取值默认为0，取下一节点时默认为空即可
+     (3) 对于链表的新增操作，由于需要记录上一节点位置，用于新建节点后加入链表。默认设置dumyheader( ListNode(0) )，避免对链表新增时增加额外的逻辑判断。
+  
+  ```java
+  class Solution {
+      public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+          ListNode dumyheader = new ListNode(0);
+          ListNode p = l1, q = l2, cur = dumyheader;
+          // 是否进位标识
+          int charge = 0;
+          while (p != null || q!= null){
+              // 计算当前位数的值，对于空值进行默认为0
+              int curval = ((p == null) ? 0 : p.val) + ((q == null) ? 0 : q.val) + charge;
+              // 利用java 整除的特性，计算是否进位
+              charge = curval / 10;
+              // 利用模运算获取当前值
+              cur.next = new ListNode(curval % 10);
+              cur = cur.next;
+              p = ((p != null) ? p.next : null);
+              q = ((q != null) ? q.next : null);            
+              
+          }
+          if(charge > 0) {
+              cur.next = new ListNode(1);
+          }
+          
+          return dumyheader.next;
+      }
+  }
+  ```
+  
+  3. 复杂度：
+  
+  时间复杂度| 空间复杂度 | 耗时 | 内存
+  --- | --- | --- | ---
+  O(n) | O(n) | 23ms | 37.2MB
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false

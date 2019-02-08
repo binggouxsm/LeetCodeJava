@@ -1,0 +1,96 @@
+createdAt: "2019-02-08T09:25:11.121Z"
+updatedAt: "2019-02-08T09:44:17.812Z"
+type: "MARKDOWN_NOTE"
+folder: "108c3fae96246b2654cd"
+title: "00013 Roman to Integer"
+tags: []
+content: '''
+  # [00013 Roman to Integer](https://leetcode.com/problems/roman-to-integer/)
+  github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
+  
+  ## 思路1：直接解法
+  
+  ### (1) 具体解法:
+  
+  将所有可能出现的字符组合存在hashMap中，然后遍历字符时，if判断，是否要取两位字符，最后再将字符转换为数字进行加法
+  
+  ```java
+  class Solution {
+      public int romanToInt(String s) {
+          
+          Map<String, Integer> map = new HashMap<String, Integer>();
+  		map.put("I",1);map.put("IV",4);map.put("IX",9);
+  		map.put("V",5);
+  		map.put("X",10);map.put("XL",40);map.put("XC",90);
+  		map.put("L",50);
+  		map.put("C",100);map.put("CD",400);map.put("CM",900);
+  		map.put("D",500);
+  		map.put("M",1000);
+  		
+  		int result = 0 ;
+          for (int i = 0 ; i < s.length(); i++){
+              StringBuffer trans = new StringBuffer().append(s.charAt(i));
+              char next = (i >= s.length() - 1) ? ' ' : s.charAt(i+1);
+              if(("I".equals(trans.toString()) && (next =='V' ||  next =='X')) ||
+              		("X".equals(trans.toString()) && (next =='C' ||  next =='L')) ||
+              		("C".equals(trans.toString()) && (next =='D' ||  next =='M'))
+              		) {
+              	trans.append(next);
+              	i++;
+              }
+              result+=map.get(trans.toString());            
+          }
+  		return result;
+          
+          
+      }
+  }
+  ```
+  
+  ### (2) 复杂度：
+  
+  时间复杂度| 空间复杂度 | 耗时 | 内存
+  --- | --- | --- | ---
+  O(n) | O(1) | 74ms | 28.9MB
+  
+  ## 思路2：做减法
+  
+  ### (1) 具体解法：
+  
+  遍历字符时，当后一位的值比当前值大时，当前值做减法。
+  
+  ```java
+  class Solution {
+      public int romanToInt(String s) {
+          Map<Character, Integer> map = new HashMap<Character, Integer>();
+  		map.put('I', 1);
+  		map.put('V', 5);
+  		map.put('X', 10);
+  		map.put('L', 50);
+  		map.put('C', 100);
+  		map.put('D', 500);
+  		map.put('M', 1000);
+  
+  		int result = 0;
+  		for (int i = 0; i < s.length() - 1; i++) {
+  			char cur = s.charAt(i);
+  			char next = s.charAt(i + 1);
+  			result += map.get(cur) *( (map.get(cur) <map.get(next) ) ? -1 : 1);
+  		}
+  		return result + map.get(s.charAt(s.length() - 1));
+          
+      }
+  }
+  ```
+  ### (2) 复杂度：
+  
+  时间复杂度| 空间复杂度 | 耗时 | 内存
+  --- | --- | --- | ---
+  O(n) | O(1) | 64ms | 25.9MB
+  
+  
+  
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false
