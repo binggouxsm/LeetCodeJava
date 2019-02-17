@@ -39,6 +39,46 @@
       "key": "108c3fae96246b2654cd",
       "color": "#E10051",
       "name": "00013 Roman to Integer"
+    },
+    {
+      "key": "58b00cc151cf0d465453",
+      "color": "#E8D252",
+      "name": "00017 Letter Combinations of a Phone Number"
+    },
+    {
+      "key": "1f61c97b824f37a777f0",
+      "color": "#3FD941",
+      "name": "00014 Longest Common Prefix"
+    },
+    {
+      "key": "d6e76d97949ccabf37e7",
+      "color": "#E10051",
+      "name": "00019 Remove Nth Node From End of List"
+    },
+    {
+      "key": "8065e301a11f5a38713e",
+      "color": "#FF8E00",
+      "name": "00020 Valid Parentheses"
+    },
+    {
+      "key": "daef7397e311145df3dd",
+      "color": "#30D5C8",
+      "name": "00021 Merge Two Sorted Lists"
+    },
+    {
+      "key": "af0b617ba6c3d02ab323",
+      "color": "#FF8E00",
+      "name": "00022 Generate Parentheses"
+    },
+    {
+      "key": "b735404f26eaf6d9d61d",
+      "color": "#30D5C8",
+      "name": "00023 Merge k Sorted Lists"
+    },
+    {
+      "key": "f81ebd8408c5e12ba56f",
+      "color": "#E10051",
+      "name": "00026 Remove Duplicates from Sorted Array"
     }
   ],
   "version": "1.0"

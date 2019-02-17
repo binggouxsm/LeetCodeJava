@@ -1,0 +1,82 @@
+# [00017 Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
+
+github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
+
+## 思路：回溯算法
+
+### (1) 回溯算法
+
+回溯法是一种选优搜索法，按选优条件向前搜索，以达到目标。但当探索到某一步时，发现原先选择并不优或达不到目标，就退回一步重新选择，这种走不通就退回再走的技术为回溯法，而满足回溯条件的某个状态的点称为“回溯点”。
+
+回溯法通常用递归方法来实现
+
+```
+ALGORITHM try(v1,v2,..., vn) // 这里的V1.....V2携带的参数说明 “可能解”  
+    // 入口处验证是否是全局解，如果是，直接返回。 
+    IF (v1,...,vi) is a solution THEN RETURN (v1,...,vi)
+    // 实际编程中也需要查看是否是无效解，如果是，也是直接返回，用于减少分支，降低遍历空间
+    IF (v1,...,vi) is a invalid branch THEN RETURN
+    // 遍历下一步解空间，对所有可能选项 v进行递归判断
+    FOR each v DO  
+       try(v1,...,vi,v)
+```
+
+### (2) 具体解法
+
+采用回溯法，逐个数字字符，遍历可能的字母字符
+
+```java
+class Solution {
+    public List<String> letterCombinations(String digits) {
+        if (digits.length() == 0)
+            return new ArrayList<String>(); 
+        
+        Map<Character,String> mapping = new HashMap<Character, String>();
+        mapping.put('2',"abc");
+        mapping.put('3',"def");
+        mapping.put('4',"ghi");
+        mapping.put('5',"jkl");
+        mapping.put('6',"mno");
+        mapping.put('7',"pqrs");
+        mapping.put('8',"tuv");
+        mapping.put('9',"wxyz");
+        
+        List<String> target = new ArrayList<String>();
+        
+        combine("",digits,target,mapping);
+        
+        return target;
+        
+    }
+    
+    public void combine(String combination, String digits,List<String> target,Map<Character,String> mapping){
+        // 如果没有后续需处理的字符，则返回最终结果
+        if (digits.length() == 0){
+            target.add(combination);
+            return;
+        }
+        // 取剩下的数字字符中的第一个数字对应的字符集    
+        String alph = mapping.get(digits.charAt(0));
+        // 如果不存在字符集则，用*替换
+        if(alph == null){
+            // 下一步递归遍历解空间
+            combine(combination+"*",digits.substring(1),target, mapping);
+        }else{
+            // 如果存在字符集则，遍历所有可能的字符
+            for (int i = 0 ; i < alph.length(); i++){
+                // 下一步递归遍历解空间
+                combine(combination+alph.charAt(i), digits.substring(1),target, mapping);
+            }    
+        }
+    }
+}
+```
+
+### (3) 复杂度：
+
+时间复杂度| 空间复杂度 | 耗时 | 内存
+--- | --- | --- | ---
+O(4<sup>N</sup>) | O(4<sup>N</sup>) | 2ms | 37.4MB
+
+N为字符长度
+
