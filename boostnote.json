@@ -79,6 +79,16 @@
       "key": "f81ebd8408c5e12ba56f",
       "color": "#E10051",
       "name": "00026 Remove Duplicates from Sorted Array"
+    },
+    {
+      "key": "6f10b089bf3754381eaf",
+      "color": "#3FD941",
+      "name": "00034 Find First and Last Position of Element in Sorted Array"
+    },
+    {
+      "key": "33c501084f225219abed",
+      "color": "#E8D252",
+      "name": "00041 First Missing Positive"
     }
   ],
   "version": "1.0"
