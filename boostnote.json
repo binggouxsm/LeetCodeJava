@@ -89,6 +89,11 @@
       "key": "33c501084f225219abed",
       "color": "#E8D252",
       "name": "00041 First Missing Positive"
+    },
+    {
+      "key": "6ad378cc5edf044ee9b6",
+      "color": "#2BA5F7",
+      "name": "00046 Permutations"
     }
   ],
   "version": "1.0"

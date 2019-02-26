@@ -1,0 +1,48 @@
+createdAt: "2019-02-26T17:07:14.124Z"
+updatedAt: "2019-02-26T17:12:23.718Z"
+type: "MARKDOWN_NOTE"
+folder: "6ad378cc5edf044ee9b6"
+title: "00046 Permutations"
+tags: []
+content: '''
+  # [00046 Permutations](https://leetcode.com/problems/permutations/)
+  
+  ## 思路： 回溯法
+  
+  ### (1)具体解法：
+  
+  ```java
+  class Solution {
+      public List<List<Integer>> permute(int[] nums) {
+          List<List<Integer>> ret = new ArrayList<List<Integer>>();
+          ArrayList<Integer> leftnums = new ArrayList<Integer>();
+          for(int num : nums){
+              leftnums.add(num);
+          }
+          backtrack(new ArrayList<Integer>(),leftnums , ret);
+          return ret;
+      }
+      
+      public void backtrack(ArrayList<Integer> perm,ArrayList<Integer> leftnums, List<List<Integer>> ret){
+          if(leftnums.size() == 0){
+              ret.add(new ArrayList<Integer>(perm));
+          }
+          for(int i = 0 ; i < leftnums.size(); i++){
+          	
+          	ArrayList<Integer> leftnumsCopy = (ArrayList<Integer>)leftnums.clone();
+              perm.add(leftnums.get(i));
+              leftnumsCopy.remove(i);
+              backtrack(perm,leftnumsCopy,ret);
+              perm.remove(perm.size() -1);
+          }
+              
+      }
+  }
+  ```
+  
+  
+  
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false
