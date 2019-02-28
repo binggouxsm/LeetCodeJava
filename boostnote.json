@@ -94,6 +94,16 @@
       "key": "6ad378cc5edf044ee9b6",
       "color": "#2BA5F7",
       "name": "00046 Permutations"
+    },
+    {
+      "key": "b1b7ffb34321308f1122",
+      "color": "#E8D252",
+      "name": "00048 Rotate Image"
+    },
+    {
+      "key": "994f3fdb5fb047cf4c40",
+      "color": "#FF8E00",
+      "name": "00054 Spiral Matrix"
     }
   ],
   "version": "1.0"
