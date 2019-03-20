@@ -104,6 +104,11 @@
       "key": "994f3fdb5fb047cf4c40",
       "color": "#FF8E00",
       "name": "00054 Spiral Matrix"
+    },
+    {
+      "key": "cf5c0e69ffecd0ddaa58",
+      "color": "#E10051",
+      "name": "00055 Jump Game"
     }
   ],
   "version": "1.0"

@@ -1,0 +1,71 @@
+[00055 Jump Game](https://leetcode.com/problems/jump-game/)
+
+github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
+
+## 思路一：回溯法
+
+### (1)具体解法
+
+记录当前位置，从当前允许的最大步长开始递减搜索，知道能到达最后位置，结束递归。
+
+```java
+class Solution {
+    public boolean canJump(int[] nums) {
+	    if (nums == null || nums.length == 0) return true;
+	    return backTrackingJump(0, nums);
+    }
+	
+	public boolean backTrackingJump(int currPos, int[] nums) {
+	    if (currPos == nums.length - 1)
+	        return true;
+	    for(int j = nums[currPos]; j > 0 ; j --) {
+	        if(currPos + j < nums.length && backTrackingJump(currPos + j, nums))
+	            return true;
+	    }
+	    return false;
+	}
+}
+```
+### (2) 复杂度：
+
+时间复杂度| 空间复杂度 | 耗时 | 内存
+--- | --- | --- | ---
+O(2<sup>n</sup>) | O(n) | ~ | ~
+
+有人写了超牛B的测试结果，是算法运行的最坏结果，导致每次运行超时，拿不到运行数据了。
+
+测试案例如下：
+\[25000,24999,24998,24997,24996,...1,1,0]， T^T
+
+### (3) 改进点：
+
+存在重复计算，重复计算了最大能到位置比之前计算的最大能到位置还短。需把这块排除掉。
+
+## 思路二、贪婪算法
+
+### (1)具体解法
+
+遍历数组，计算最大达到位置，直达最大到达位置超过nums.length -1或者，遍历的位置与maxreach一致。
+
+```java
+class Solution {
+    public boolean canJump(int[] nums) {
+	    if (nums == null || nums.length == 0) return true;
+	    int maxreach = nums[0], pos = 1;
+	    while(pos <= maxreach && maxreach < nums.length -1) {
+	        if(pos + nums[pos] > maxreach) {
+	            maxreach = pos + nums[pos];
+	        }
+            pos++;
+	    }
+	    if(maxreach >= nums.length -1) return true;
+	    return false;
+    }
+}
+```
+
+### (2) 复杂度：
+
+时间复杂度| 空间复杂度 | 耗时 | 内存
+--- | --- | --- | ---
+O(n) | O(1) | 3ms | 40m
