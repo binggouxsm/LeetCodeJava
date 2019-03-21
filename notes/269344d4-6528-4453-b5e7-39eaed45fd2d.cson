@@ -1,11 +1,14 @@
 createdAt: "2019-02-08T02:57:56.569Z"
-updatedAt: "2019-02-08T05:14:54.368Z"
+updatedAt: "2019-03-21T06:56:54.420Z"
 type: "MARKDOWN_NOTE"
 folder: "227ba47f55350a74b9fd"
 title: "00011 Container With Most Water"
-tags: []
+tags: [
+  "贪婪"
+]
 content: '''
-  # [00011 Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
+  [00011 Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
+  
   github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
   
   ## 思路1：暴力解法

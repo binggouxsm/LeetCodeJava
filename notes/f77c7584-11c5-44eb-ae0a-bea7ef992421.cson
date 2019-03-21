@@ -1,9 +1,12 @@
 createdAt: "2019-03-20T11:04:08.935Z"
-updatedAt: "2019-03-20T12:32:23.549Z"
+updatedAt: "2019-03-21T06:50:11.652Z"
 type: "MARKDOWN_NOTE"
 folder: "cf5c0e69ffecd0ddaa58"
 title: "00055 Jump Game"
-tags: []
+tags: [
+  "回溯"
+  "贪婪"
+]
 content: '''
   [00055 Jump Game](https://leetcode.com/problems/jump-game/)
   

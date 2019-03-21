@@ -1,9 +1,11 @@
 createdAt: "2019-02-26T17:07:14.124Z"
-updatedAt: "2019-02-26T17:12:23.718Z"
+updatedAt: "2019-03-21T07:02:42.724Z"
 type: "MARKDOWN_NOTE"
 folder: "6ad378cc5edf044ee9b6"
 title: "00046 Permutations"
-tags: []
+tags: [
+  "回溯"
+]
 content: '''
   # [00046 Permutations](https://leetcode.com/problems/permutations/)
   

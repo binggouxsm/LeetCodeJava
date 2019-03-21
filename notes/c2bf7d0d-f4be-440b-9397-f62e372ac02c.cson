@@ -1,12 +1,14 @@
 createdAt: "2019-02-04T06:30:24.670Z"
-updatedAt: "2019-02-04T07:56:18.752Z"
+updatedAt: "2019-03-21T06:51:50.030Z"
 type: "MARKDOWN_NOTE"
 folder: "44cb8d84ff45039d93dc"
 title: "00001 Two Sum"
 tags: []
 content: '''
-  # [00001 Two Sum](https://leetcode.com/problems/two-sum/)
+  [00001 Two Sum](https://leetcode.com/problems/two-sum/)
+  
   github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
+  
   ## 思路一：暴力解法
   1. 具体解法：遍历数组中所有数字两两相加，判断等于target
   
@@ -32,6 +34,7 @@ content: '''
   
   
   ## 思路二：HashMap
+  
   1. 具体解法：将数组按照按照\\[值，下标\\]的方式存入hashmap，遍历时，按照target - 值 查找下标，通过hashmap用空间O(n)换时间O(1)
   
   ```java

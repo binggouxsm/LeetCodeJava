@@ -1,4 +1,4 @@
-# [00021 Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
+[00021 Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
 
 github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
 

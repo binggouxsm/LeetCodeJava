@@ -1,9 +1,11 @@
 createdAt: "2019-02-05T12:59:51.119Z"
-updatedAt: "2019-02-05T13:54:25.766Z"
+updatedAt: "2019-03-21T06:55:10.982Z"
 type: "MARKDOWN_NOTE"
 folder: "0d5ab955d4cd65f527bc"
 title: "00005 Longest Palindromic Substring"
-tags: []
+tags: [
+  "动态规划"
+]
 content: '''
   # [00005 Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
   github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)

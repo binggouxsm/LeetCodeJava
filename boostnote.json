@@ -109,6 +109,11 @@
       "key": "cf5c0e69ffecd0ddaa58",
       "color": "#E10051",
       "name": "00055 Jump Game"
+    },
+    {
+      "key": "3ec8b76933e043679a17",
+      "color": "#FF8E00",
+      "name": "00056 Merge Intervals"
     }
   ],
   "version": "1.0"

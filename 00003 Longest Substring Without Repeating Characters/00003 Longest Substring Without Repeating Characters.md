@@ -1,4 +1,5 @@
-# [00003 Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+[00003 Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+
 github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
 
 ## 思路1：暴力解法
@@ -45,7 +46,9 @@ O(n<sup>3</sup>) | O(n) | 94ms | 27.8MB
 存在重复计算，例如 abcabcbb 当从0开始，计算abc最长，再加入a后出现重复字符，接下来从1开始，可以复用bc不同的结果，减少重复计算
 
 ## 思路2：滑动窗口
+
 ### (1)具体解法：
+
 充分利用之前的计算不重复的结果，set中存放不重复字符，当窗口的末尾位置的字符如果不在set中，则末尾位置+1,末尾字符加入set中；如果重复，则移除窗口开头位置的字符，开头位置+1； 当末尾位置超出字符长度，没有计算长度，需要补计算一次长度 
 
 ```java

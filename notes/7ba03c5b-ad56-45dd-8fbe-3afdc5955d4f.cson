@@ -1,9 +1,11 @@
 createdAt: "2019-02-28T15:21:40.980Z"
-updatedAt: "2019-02-28T15:24:16.957Z"
+updatedAt: "2019-03-21T06:51:19.501Z"
 type: "MARKDOWN_NOTE"
 folder: "b1b7ffb34321308f1122"
 title: "00048 Rotate Image"
-tags: []
+tags: [
+  "矩阵"
+]
 content: '''
   # [00048 Rotate Image](https://leetcode.com/problems/rotate-image/)
   

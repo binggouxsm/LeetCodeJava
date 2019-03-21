@@ -1,5 +1,7 @@
-# [00001 Two Sum](https://leetcode.com/problems/two-sum/)
+[00001 Two Sum](https://leetcode.com/problems/two-sum/)
+
 github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
+
 ## 思路一：暴力解法
 1. 具体解法：遍历数组中所有数字两两相加，判断等于target
 
@@ -25,6 +27,7 @@ O(n<sup>2</sup>) | O(1) | 22ms | 27.6MB
 
 
 ## 思路二：HashMap
+
 1. 具体解法：将数组按照按照\[值，下标\]的方式存入hashmap，遍历时，按照target - 值 查找下标，通过hashmap用空间O(n)换时间O(1)
 
 ```java

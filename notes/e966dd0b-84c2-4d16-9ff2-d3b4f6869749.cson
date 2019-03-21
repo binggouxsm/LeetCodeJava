@@ -1,9 +1,11 @@
 createdAt: "2019-02-14T10:46:42.807Z"
-updatedAt: "2019-02-14T12:36:57.932Z"
+updatedAt: "2019-03-21T06:58:28.548Z"
 type: "MARKDOWN_NOTE"
 folder: "d6e76d97949ccabf37e7"
 title: "00019 Remove Nth Node From End of List"
-tags: []
+tags: [
+  "链表"
+]
 content: '''
   # [00019 Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
   

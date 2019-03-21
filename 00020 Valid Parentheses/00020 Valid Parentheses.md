@@ -1,4 +1,4 @@
-# [00020 Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+[00020 Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
 
 github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
 

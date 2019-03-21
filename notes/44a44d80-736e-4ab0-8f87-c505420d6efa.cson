@@ -1,9 +1,11 @@
 createdAt: "2019-02-13T11:22:43.320Z"
-updatedAt: "2019-02-13T11:52:16.005Z"
+updatedAt: "2019-03-21T06:57:46.094Z"
 type: "MARKDOWN_NOTE"
 folder: "58b00cc151cf0d465453"
 title: "00017 Letter Combinations of a Phone Number"
-tags: []
+tags: [
+  "回溯"
+]
 content: '''
   # [00017 Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
   

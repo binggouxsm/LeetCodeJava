@@ -1,11 +1,13 @@
 createdAt: "2019-02-15T13:42:23.436Z"
-updatedAt: "2019-02-16T02:31:05.067Z"
+updatedAt: "2019-03-21T07:00:10.037Z"
 type: "MARKDOWN_NOTE"
 folder: "daef7397e311145df3dd"
 title: "00021 Merge Two Sorted Lists"
-tags: []
+tags: [
+  "链表"
+]
 content: '''
-  # [00021 Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
+  [00021 Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
   
   github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
   

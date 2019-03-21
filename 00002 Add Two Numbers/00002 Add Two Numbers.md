@@ -1,6 +1,9 @@
-# [00002 Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
+[00002 Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
+
 github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
+
 ## 思路：暴力解法
+
 1. 具体解法： 同时遍历 l1, l2 两个链表，如果两个链表节点的值相加超过10时，当前值为 模10 的结果，且下次计算 链表节点的值 +1。直到两个链表遍历结束。
 2. 具体优化细节：
    (1) 利用相加的值整除10 ，得到是否进位的标识；利用相加的值%10，得到当前值

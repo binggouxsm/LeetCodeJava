@@ -1,9 +1,11 @@
 createdAt: "2019-02-16T04:09:36.632Z"
-updatedAt: "2019-02-16T04:21:47.105Z"
+updatedAt: "2019-03-21T07:00:23.842Z"
 type: "MARKDOWN_NOTE"
 folder: "af0b617ba6c3d02ab323"
 title: "00022 Generate Parentheses"
-tags: []
+tags: [
+  "栈"
+]
 content: '''
   # [00022 Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
   

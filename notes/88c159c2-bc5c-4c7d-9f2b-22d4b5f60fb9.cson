@@ -1,9 +1,11 @@
 createdAt: "2019-02-17T03:03:58.878Z"
-updatedAt: "2019-02-17T04:38:29.790Z"
+updatedAt: "2019-03-21T07:01:56.303Z"
 type: "MARKDOWN_NOTE"
 folder: "f81ebd8408c5e12ba56f"
 title: "00026 Remove Duplicates from Sorted Array"
-tags: []
+tags: [
+  "数组"
+]
 content: '''
   # [00026 Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
   

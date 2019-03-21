@@ -1,9 +1,11 @@
 createdAt: "2019-02-21T12:48:12.980Z"
-updatedAt: "2019-02-21T13:31:20.436Z"
+updatedAt: "2019-03-21T07:02:28.079Z"
 type: "MARKDOWN_NOTE"
 folder: "33c501084f225219abed"
 title: "00041 First Missing Positive"
-tags: []
+tags: [
+  "数组"
+]
 content: '''
   # [00041 First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
   

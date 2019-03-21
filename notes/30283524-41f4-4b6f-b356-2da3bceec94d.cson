@@ -1,11 +1,13 @@
 createdAt: "2019-02-14T12:29:17.033Z"
-updatedAt: "2019-02-14T12:37:56.091Z"
+updatedAt: "2019-03-21T06:59:51.864Z"
 type: "MARKDOWN_NOTE"
 folder: "8065e301a11f5a38713e"
 title: "00020 Valid Parentheses"
-tags: []
+tags: [
+  "栈"
+]
 content: '''
-  # [00020 Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+  [00020 Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
   
   github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
   
