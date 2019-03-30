@@ -114,6 +114,26 @@
       "key": "3ec8b76933e043679a17",
       "color": "#FF8E00",
       "name": "00056 Merge Intervals"
+    },
+    {
+      "key": "8ccae26921899cd5eaf4",
+      "color": "#30D5C8",
+      "name": "00066 Plus One"
+    },
+    {
+      "key": "10882a4a8ebe512ca670",
+      "color": "#2BA5F7",
+      "name": "00062 Unique Paths"
+    },
+    {
+      "key": "623acab9d1c5bc86ef7a",
+      "color": "#30D5C8",
+      "name": "00070 Climbing Stairs"
+    },
+    {
+      "key": "9831841c8c347d890057",
+      "color": "#30D5C8",
+      "name": "总结"
     }
   ],
   "version": "1.0"
