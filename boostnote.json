@@ -134,6 +134,26 @@
       "key": "9831841c8c347d890057",
       "color": "#30D5C8",
       "name": "总结"
+    },
+    {
+      "key": "a9e1c76a393ff4eb81e8",
+      "color": "#FF8E00",
+      "name": "00091 Decode Ways"
+    },
+    {
+      "key": "e8ebf8edd83454617952",
+      "color": "#E10051",
+      "name": "00075 Sort Colors"
+    },
+    {
+      "key": "36b67158e8e3a74bd485",
+      "color": "#30D5C8",
+      "name": "00088 Merge Sorted Array"
+    },
+    {
+      "key": "61137ab952d9c7d4cd57",
+      "color": "#B013A4",
+      "name": "00079 Word Search"
     }
   ],
   "version": "1.0"

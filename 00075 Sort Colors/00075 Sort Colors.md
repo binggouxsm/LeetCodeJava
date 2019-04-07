@@ -1,0 +1,43 @@
+[00075 Sort Colors](https://leetcode.com/problems/sort-colors/)
+
+github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
+
+## 思路: 一遍遍历
+
+### (1) 具体解法：
+
+使用两个下标，分别记录红色(0)的排序下标，和蓝色(2)的排序下标，一边遍历一边交换，直到遍历到蓝色下标位置
+
+```java
+class Solution {
+    public void sortColors(int[] nums) {
+        int ridx= 0 , bidx = nums.length -1, i = 0;
+        while (i <= bidx) {
+            if(nums[i] == 0 && i>ridx){
+                swap(nums,i,ridx);
+                ridx++;
+            }else if(nums[i] == 2){
+                swap(nums,i,bidx);
+                bidx--;
+            }else{
+                i++;
+            }
+        }
+    }
+
+    public void swap(int[] nums, int from , int to){
+        int tmp = nums[from];
+        nums[from] = nums[to];
+        nums[to] = tmp;
+    }
+}
+
+```
+
+### (2) 复杂度：
+
+时间复杂度| 空间复杂度 | 耗时 | 内存
+--- | --- | --- | ---
+O(n) | O(1) | 0ms | 37.2m
+
+

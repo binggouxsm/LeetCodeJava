@@ -1,0 +1,90 @@
+createdAt: "2019-04-07T02:56:28.342Z"
+updatedAt: "2019-04-07T03:20:56.211Z"
+type: "MARKDOWN_NOTE"
+folder: "36b67158e8e3a74bd485"
+title: "00088 Merge Sorted Array"
+tags: []
+content: '''
+  [00088 Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
+  
+  github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
+  
+  ## 思路: merge排序思路
+  
+  ### (1) 具体解法:
+  
+  由于num1保证有足够的空间，从节省空间的角度的话，是要往nums1上去归并。按照归并排序的思路，定义两个指针i,j分别指向两个数组头
+  (1) 如果nums1\\[i]<=nums2\\[j]，则i++
+  (2)如果nums1\\[i]>nums2\\[j],则num1的后续元素要往后挪，给num2\\[j]腾位置插入，插入后j++
+  直到最后，如果num2还没消耗完则插入num1末尾
+  
+  ```java
+  class Solution {
+      public void merge(int[] nums1, int m, int[] nums2, int n) {
+          int i = 0, j = 0;
+          while(i < m + n && j < n){
+              if(nums1[i]>nums2[j]){
+                  for (int k = m + j; k > i; k--) {
+                      nums1[k] = nums1[k - 1];
+                  }
+                  nums1[i] = nums2[j];
+                  j++;
+              }
+              i++;
+          }
+          if(j < n){
+              for (int k = j; k < n; k++) {
+                  nums1[m+k] = nums2[k];
+              }
+          }
+          
+      }
+  }
+  ```
+  
+  ### (2) 复杂度：
+  
+  时间复杂度| 空间复杂度 | 耗时 | 内存
+  --- | --- | --- | ---
+  O(n<sup>2</sup>) | O(1) | 1ms | 37.2m
+  
+  ### (3) 改进：
+  
+  由于数组插入时要挪动元素，时间复杂度为O(n)，导致整体时间复杂度上升。
+  
+  ## 思路: merge排序思路改
+  
+  ### (1) 具体解法:
+  
+  通过将从前往后归并，变成为从后往前归并，避免元素插入时的挪动操作，降低时间复杂度。
+  
+  ```java
+  class Solution {
+      public void merge(int[] nums1, int m, int[] nums2, int n) {
+          int i = m - 1, j = n - 1 , k = m + n -1;
+          while (i >= 0 && j >= 0){
+              if(nums1[i] <= nums2[j]){
+                  nums1[k--] = nums2[j--];
+              }else{
+                  nums1[k--] = nums1[i--];
+              }
+          }
+          while (j>=0)
+              nums1[k--] = nums2[j--];
+          
+      }
+  }
+  ```
+  
+  ### (2) 复杂度：
+  
+  时间复杂度| 空间复杂度 | 耗时 | 内存
+  --- | --- | --- | ---
+  O(n) | O(1) | 0ms | 37.2m
+  
+  
+  
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false
