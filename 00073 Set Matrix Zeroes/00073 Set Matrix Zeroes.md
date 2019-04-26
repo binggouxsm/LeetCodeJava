@@ -1,0 +1,46 @@
+[00073 Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
+
+github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
+
+## 思路：遍历
+
+### (1)具体解法：
+
+遍历二维数组，每行如果有0，使用set记录列号，如果当前行有0，则将当前行置0。遍历完一遍后，再将set中记录的列，置0.
+
+```java
+class Solution {
+    public static void setZeroes(int[][] matrix) {
+        Set<Integer> colSet = new HashSet<>();
+        for (int i = 0; i < matrix.length; i++) {
+            boolean lineflag = false;
+            for (int j = 0; j < matrix[i].length; j++) {
+                if(matrix[i][j] == 0){
+                    lineflag = true;
+                    colSet.add(j);
+                }
+            }
+            if(lineflag){
+                for (int j = 0; j < matrix[i].length; j++) {
+                    matrix[i][j] = 0;
+                }
+            }
+        }
+        Iterator<Integer> iter = colSet.iterator();
+        while (iter.hasNext()){
+            int j = iter.next();
+            for (int i = 0; i < matrix.length; i++) {
+                matrix[i][j] = 0;
+            }
+        }
+    }
+}    
+```
+
+### (2) 复杂度：
+
+时间复杂度| 空间复杂度 | 耗时 | 内存
+--- | --- | --- | ---
+O(M*N) | O(M) | 2ms | 45.1m
+
+

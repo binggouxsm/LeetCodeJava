@@ -1,9 +1,11 @@
 createdAt: "2019-04-07T10:27:59.565Z"
-updatedAt: "2019-04-07T11:56:05.581Z"
+updatedAt: "2019-04-10T11:39:55.263Z"
 type: "MARKDOWN_NOTE"
 folder: "61137ab952d9c7d4cd57"
 title: "00079 Word Search"
-tags: []
+tags: [
+  "回溯"
+]
 content: '''
   [00079 Word Search](https://leetcode.com/problems/word-search/)
   

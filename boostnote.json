@@ -154,6 +154,21 @@
       "key": "61137ab952d9c7d4cd57",
       "color": "#B013A4",
       "name": "00079 Word Search"
+    },
+    {
+      "key": "41a9f3a1115b2f190d76",
+      "color": "#B013A4",
+      "name": "00073 Set Matrix Zeroes"
+    },
+    {
+      "key": "b3a890a696519f2397e6",
+      "color": "#30D5C8",
+      "name": "00094 Binary Tree Inorder Traversal"
+    },
+    {
+      "key": "c0a183748bdd20f11952",
+      "color": "#FF8E00",
+      "name": "00101 Symmetric Tree"
     }
   ],
   "version": "1.0"

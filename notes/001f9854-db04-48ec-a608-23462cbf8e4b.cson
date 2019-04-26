@@ -1,9 +1,11 @@
 createdAt: "2019-04-07T02:56:28.342Z"
-updatedAt: "2019-04-07T03:20:56.211Z"
+updatedAt: "2019-04-10T11:39:46.994Z"
 type: "MARKDOWN_NOTE"
 folder: "36b67158e8e3a74bd485"
 title: "00088 Merge Sorted Array"
-tags: []
+tags: [
+  "排序"
+]
 content: '''
   [00088 Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
   
