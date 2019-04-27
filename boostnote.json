@@ -169,6 +169,21 @@
       "key": "c0a183748bdd20f11952",
       "color": "#FF8E00",
       "name": "00101 Symmetric Tree"
+    },
+    {
+      "key": "3e7e4f9179c489d384c9",
+      "color": "#3FD941",
+      "name": "00102 Binary Tree Level Order Traversal"
+    },
+    {
+      "key": "d6fe07f183c9e5eafa30",
+      "color": "#30D5C8",
+      "name": "00103 Binary Tree Zigzag Level Order Traversal"
+    },
+    {
+      "key": "163e4f4c6cb863318c15",
+      "color": "#30D5C8",
+      "name": "00104 Maximum Depth of Binary Tree"
     }
   ],
   "version": "1.0"

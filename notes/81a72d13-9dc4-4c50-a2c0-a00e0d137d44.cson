@@ -1,0 +1,22 @@
+createdAt: "2019-04-27T12:57:00.489Z"
+updatedAt: "2019-04-27T12:58:33.049Z"
+type: "MARKDOWN_NOTE"
+folder: "d6fe07f183c9e5eafa30"
+title: "00103 Binary Tree Zigzag Level Order Traversal"
+tags: []
+content: '''
+  [00103 Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)
+  
+  github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
+  
+  
+  ## 思路；递归
+  
+  ### (1)具体解法
+  
+  中序递归遍历的基础上，增加层级序号，依据层级序号决定先后顺序
+  
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false

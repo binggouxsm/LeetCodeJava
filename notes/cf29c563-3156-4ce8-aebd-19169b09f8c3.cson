@@ -1,9 +1,11 @@
 createdAt: "2019-04-26T14:22:05.387Z"
-updatedAt: "2019-04-26T14:47:12.698Z"
+updatedAt: "2019-04-27T13:55:20.221Z"
 type: "MARKDOWN_NOTE"
 folder: "c0a183748bdd20f11952"
 title: "00101 Symmetric Tree"
-tags: []
+tags: [
+  "二叉树"
+]
 content: '''
   [00101 Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
   
