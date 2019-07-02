@@ -184,6 +184,41 @@
       "key": "163e4f4c6cb863318c15",
       "color": "#30D5C8",
       "name": "00104 Maximum Depth of Binary Tree"
+    },
+    {
+      "key": "6c7add08cb8966802a3f",
+      "color": "#B013A4",
+      "name": "00125 Valid Palindrome"
+    },
+    {
+      "key": "7e25d02f0c2b5e3f91bc",
+      "color": "#FF8E00",
+      "name": "00121 Best Time to Buy and Sell Stock"
+    },
+    {
+      "key": "5748560e4427864abcc5",
+      "color": "#B013A4",
+      "name": "00122 Best Time to Buy and Sell Stock II"
+    },
+    {
+      "key": "006857a751f4c5518693",
+      "color": "#2BA5F7",
+      "name": "00038 Count and Say"
+    },
+    {
+      "key": "b2d5e7794b649d1abf93",
+      "color": "#FF8E00",
+      "name": "00130 Surrounded Regions"
+    },
+    {
+      "key": "6ed66b7d0f46ed4a505e",
+      "color": "#E10051",
+      "name": "00134 Gas Station"
+    },
+    {
+      "key": "5af4a0eddf29ad2ad329",
+      "color": "#E10051",
+      "name": "00136 Single Number"
     }
   ],
   "version": "1.0"

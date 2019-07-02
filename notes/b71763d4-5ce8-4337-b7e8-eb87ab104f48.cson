@@ -1,0 +1,100 @@
+createdAt: "2019-07-02T02:50:48.123Z"
+updatedAt: "2019-07-02T05:39:17.370Z"
+type: "MARKDOWN_NOTE"
+folder: "6ed66b7d0f46ed4a505e"
+title: "00134 Gas Station"
+tags: []
+content: '''
+  [00134 Gas Station](https://leetcode.com/problems/gas-station/)
+  
+  
+  github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
+  
+  ## 思路：滑动窗口
+  
+  ### (1) 具体解法
+  
+  先计算从0开始，计算每个站点的剩余的gas
+  
+  遍历所有的剩余gas，判断是否都大于0，如果有存在小于0，则移除头部的剩余gas，重新计算剩余gas,直到剩余gas全部都大于0，或者遍历结束
+  
+  ```java
+  class Solution {
+      public static int canCompleteCircuit(int[] gas, int[] cost) {
+          LinkedList<Integer> leftGas = new LinkedList<>();
+          int startIndex = 0;
+          for (int i = 0; i < gas.length; i++) {
+              leftGas.add(((i == 0)? 0 : leftGas.get(i-1)) + gas[i] - cost[i]);
+  
+          }
+          while(startIndex < gas.length){
+              int i = 0;
+              for (; i < gas.length; i++) {
+                  if(leftGas.get(i)<0)
+                      break;
+              }
+              if(i == gas.length) return startIndex;
+              startIndex++;
+              if(startIndex >= gas.length) return -1;
+              Integer tmp = leftGas.removeFirst();
+              for (int j = 0; j < gas.length -1; j++) {
+                  leftGas.set(j,leftGas.get(j) - tmp);
+              }
+              leftGas.add(leftGas.get(gas.length -2) + gas[startIndex-1] - cost[startIndex-1]);
+  
+          }
+          return -1;
+      }
+  }
+  ```
+  
+  
+  ### (2) 复杂度：
+  
+  时间复杂度| 空间复杂度 | 耗时 | 内存
+  --- | --- | --- | ---
+  O(N<sup>2</sup>) | O(N) |  超时 | 未知
+  
+  报“Time Limit Exceeded”，超出时间复杂度要求
+  
+  
+  ## 改进思路: 数学
+  
+  ### (1) 具体解法
+  
+  一次遍历，计算sum +=gas[i] - cost[i]， 如果最终sum >= 0,则存在能走完全程的起点。如果sum<0, 则不能走完全程。此外，计算过程中的sum找最小值，从后一个开始，必定能走完。
+  
+  ```java
+  class Solution {
+      public int canCompleteCircuit(int[] gas, int[] cost) {
+          int sum = 0;
+          int min = Integer.MAX_VALUE;
+          int ret = -1;
+          for (int i = 0; i < gas.length; i++) {
+              sum += gas[i] - cost[i];
+              if(sum < min){
+                  min = sum;
+                  ret = (i + 1) % gas.length;
+              }
+          }
+          if(sum < 0)
+              return -1;
+          return ret;
+      }
+  }
+  ```
+  
+  
+  ### (2) 复杂度：
+  
+  时间复杂度| 空间复杂度 | 耗时 | 内存
+  --- | --- | --- | ---
+  O(N) | O(1) |  0ms |  37.7MB
+  
+  
+  
+  
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false

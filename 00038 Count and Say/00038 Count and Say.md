@@ -1,0 +1,47 @@
+[00038 Count and Say](https://leetcode.com/problems/count-and-say/)
+
+
+github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
+
+## 思路： 递归
+
+### (1) 具体解法：
+
+初始化 n == 1 时，返回 1 
+
+递归计算上次的结果，基于上次的结果，计算下次的结果，
+
+维护字符和连续计数，逐个字符判断是否与之前的相等，相等则计数+1, 不相等则把结果append到结果字符，开始下一轮的计数
+
+```java
+class Solution {
+    public String countAndSay(int n) {
+        if(n == 1) return "1";
+
+        String tmp = countAndSay(n - 1);
+        StringBuffer sb = new StringBuffer();
+        char last = tmp.charAt(0);
+        int count = 1;
+        for (int i = 1; i < tmp.length(); i++) {
+            char curr = tmp.charAt(i);
+            if(curr == last)
+                count++;
+            else{
+                sb.append(count+"").append(last);
+                last = curr;
+                count = 1;
+            }
+        }
+        sb.append(count+"").append(last);
+        return sb.toString();
+    }
+}
+```
+
+### (2) 复杂度：
+
+时间复杂度| 空间复杂度 | 耗时 | 内存
+--- | --- | --- | ---
+O(2<sup>n<sup>) | O(2<sup>n<sup>) |  2ms | 34.7m
+
+

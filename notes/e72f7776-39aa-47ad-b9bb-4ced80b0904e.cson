@@ -1,0 +1,62 @@
+createdAt: "2019-05-07T06:27:19.839Z"
+updatedAt: "2019-05-07T06:31:41.858Z"
+type: "MARKDOWN_NOTE"
+folder: "6c7add08cb8966802a3f"
+title: "00125 Valid Palindrome"
+tags: []
+content: '''
+  [00125 Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
+  
+  github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
+  
+  ## 思路： 遍历
+  
+  ### (1) 具体解法：
+  
+  定义low ,high 两个指针，low指针从前到后，high指针从后到前，如果指针指向的是非数字字符，则指向下一个字符，如果都指向数字字符，则进行比较，不相等则返回false, 相等则比较下一个字符。
+  
+  ```java
+  class Solution {
+      public boolean isPalindrome(String s) {
+          if(s==null || s.length() == 0) return true;
+          int low = 0 , high = s.length() -1 ;
+  
+          while (low <= high){
+              if( tolowcase(s.charAt(low)) ==0 ) {
+                  low++;
+              }
+              else if( tolowcase(s.charAt(high)) ==0 ) {
+                  high--;
+              }
+              else if(tolowcase(s.charAt(low)) == tolowcase(s.charAt(high))){
+                  low++;
+                  high--;
+              }else {
+                  return false;
+              }
+          }
+  
+          return true;
+      }
+  
+      public int tolowcase(char a){
+          if( a >= 65 && a <= 90) return a;
+          if( a >= 97 && a <= 122) return a - 32;
+          if( a >= 48 && a <= 57) return a;
+          return 0;
+      }
+  }
+  ```
+  
+  ### (2) 复杂度：
+  
+  时间复杂度| 空间复杂度 | 耗时 | 内存
+  --- | --- | --- | ---
+  O(n) | O(1) | 2ms | 37.1m
+  
+  
+  
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false
