@@ -219,6 +219,16 @@
       "key": "5af4a0eddf29ad2ad329",
       "color": "#E10051",
       "name": "00136 Single Number"
+    },
+    {
+      "key": "a1640d525ce7142a3a74",
+      "color": "#E8D252",
+      "name": "00138 Copy List with Random Pointer"
+    },
+    {
+      "key": "518330141c0460d4eddb",
+      "color": "#E8D252",
+      "name": "00139 Word Break"
     }
   ],
   "version": "1.0"

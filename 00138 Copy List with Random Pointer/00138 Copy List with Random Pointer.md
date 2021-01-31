@@ -1,0 +1,42 @@
+[00138 Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)
+
+
+github地址：[LeetCodeJava](https://github.com/binggouxsm/LeetCodeJava)
+
+
+## 思路 ：递归
+
+### (1)具体解法
+
+利用hashmap记录 原节点和复制节点之间的对应关系，递归遍历节点，设置next 和 random值
+
+```java
+class Solution {
+    public Node copyRandomList(Node head) {
+        Map<Node, Node> nodeMap = new HashMap<>();
+        return recursiveCopy(head,nodeMap);
+    }
+
+    public Node recursiveCopy(Node node, Map<Node, Node> nodeMap){
+        if (node == null) return null;
+
+        if(nodeMap.get(node)== null){
+            Node cp = new Node();
+            cp.val = node.val;
+            nodeMap.put(node,cp);
+            cp.next = recursiveCopy(node.next,nodeMap);
+            cp.random = recursiveCopy(node.random, nodeMap);
+        }
+
+        return nodeMap.get(node);
+    }
+}
+```
+
+
+### (2) 复杂度：
+
+时间复杂度| 空间复杂度 | 耗时 | 内存
+--- | --- | --- | ---
+O(N) | O(N) |  1ms | 34.1MB
+
